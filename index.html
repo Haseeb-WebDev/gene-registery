@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gene Selection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg">
+        <h2 class="text-3xl font-semibold mb-6 text-center text-gray-800">Gene Selection</h2>
+
+        <!-- User Input Form -->
+        <form id="userForm" class="space-y-4">
+            <input type="text" id="name" placeholder="Full Name" 
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+            
+            <input type="text" id="rollNo" placeholder="Roll No (e.g., FA24-BCS-095)" 
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+            
+            <input type="text" id="gene" placeholder="Gene of Interest (e.g., FOXP2)" 
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+
+            <button type="submit" 
+                class="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-200">
+                Submit
+            </button>
+        </form>
+
+        <!-- Search Bar -->
+        <div class="flex items-center space-x-2 mt-6">
+            <input type="text" id="searchGene" placeholder="Search Gene..." 
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+            
+            <button id="searchBtn" 
+                class="bg-green-500 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-600 transition duration-200">
+                Search
+            </button>
+        </div>
+
+        <!-- Logout Button -->
+        <button id="logoutBtn" 
+            class="mt-6 w-full bg-red-500 text-white py-3 rounded-lg font-semibold hover:bg-red-600 transition duration-200">
+            Logout
+        </button>        
+    </div>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+
+</body>
+</html>
